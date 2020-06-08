@@ -264,7 +264,7 @@ embed_minimal_html('Interactive_plots/piechart_sexsite.html', views=[widgets.VBo
 
 Once volumes are corrected for the confounders, we have the choice to z-scored them. The interest of the project was also to make minimal changes to the features used in the machine learning model. The final volumes will be the ones adjusted for the confounder effects without z-scoring. 
 
-Click on the following image to open the interactive violin plots showing the volumes distributions in function of the region of the brain, the transformation applied to the volumes and the groups.
+Click on the following image to open the interactive violin plots showing the volumes distributions in function of the region of the brain, the transformation applied to the volumes, the hemisphere and the groups.
 
 <p align="center">
 <a href="blog_content/violin_regions.html"><img src="blog_content/violin_volumes.png" width="700" height="450" title="Click to access to the interactive violin plots" alt="volumes"></a>
