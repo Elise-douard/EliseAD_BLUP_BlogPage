@@ -23,7 +23,7 @@ Sometimes, CNVs can be pathogenic, meaning that they are formally associated to 
 
 Such pathogenic CNVs have been associated to significant alterations of brain volume ([Modenato et al., 2020](https://www.medrxiv.org/content/10.1101/2020.04.15.20056531v1.full) ; [Martin-Brevet et al., 2018](http://www.sciencedirect.com/science/article/pii/S000632231831401X) ; [Maillard et al., 2015](https://www.nature.com/articles/mp2014145)) or connectivity ([Moreau et al., 2019](https://www.biorxiv.org/content/10.1101/862615v1.full)). 
 
-Notably, there were common alterations of the insula volume when comparing structural brain alterations due to pathogenic CNVs and due to a neurodevelopmental disorder (e.g. ASD or SZ) ([Cauda et al., 2017](https://onlinelibrary.wiley.com/doi/abs/10.1002/aur.1759) ; [Goodkin et al., 2015](https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2108651)). 
+Notably, there were common alterations of the insula volume when comparing structural brain alterations due to pathogenic CNVs and due to a neurodevelopmental disorder (e.g. ASD or SZ) ([Cauda et al., 2017](https://onlinelibrary.wiley.com/doi/abs/10.1002/aur.1759) ; [Goodkind et al., 2015](https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2108651)). 
 
 # AIM OF THE PROJECT
 
