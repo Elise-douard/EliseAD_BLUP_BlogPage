@@ -21,9 +21,9 @@ Copy number variants (CNVs) are a family of structural variation of the chromoso
 
 Sometimes, CNVs can be pathogenic, meaning that they are formally associated to neurodevelopmental or psychiatric disorders, such as autism spectrum disorders (ASD), Schizophrenia (SZ) or intellectual disability (ID). 
 
-Such pathogenic CNVs have been associated to significant alterations of brain volume (Modenato et al., ; [Martin-Brevet et al., 2018](http://www.sciencedirect.com/science/article/pii/S000632231831401X) ; [Maillard et al., 2015](https://www.nature.com/articles/mp2014145)) or connectivity ([Moreau et al., 2019](https://www.biorxiv.org/content/10.1101/862615v1.full)). 
+Such pathogenic CNVs have been associated to significant alterations of brain volume ([Modenato et al., 2020](https://www.medrxiv.org/content/10.1101/2020.04.15.20056531v1.full) ; [Martin-Brevet et al., 2018](http://www.sciencedirect.com/science/article/pii/S000632231831401X) ; [Maillard et al., 2015](https://www.nature.com/articles/mp2014145)) or connectivity ([Moreau et al., 2019](https://www.biorxiv.org/content/10.1101/862615v1.full)). 
 
-Notably, there were common alterations of the insula volume when comparing structural brain alterations due to pathogenic CNVs and due to a neurodevelopmental disorder (e.g. ASD or SZ) (). 
+Notably, there were common alterations of the insula volume when comparing structural brain alterations due to pathogenic CNVs and due to a neurodevelopmental disorder (e.g. ASD or SZ) ([Cauda et al., 2017](https://onlinelibrary.wiley.com/doi/abs/10.1002/aur.1759) ; [Goodkin et al., 2015](https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2108651)). 
 
 # AIM OF THE PROJECT
 
@@ -36,6 +36,12 @@ Notably, there were common alterations of the insula volume when comparing struc
 - Main goal: 
 
 This project aims to feed a machine learning model with brain volumes to predict if an individual is carrier of a potentially pathogenic CNV.
+
+- Subgoals:
+
+- [x] Dealing with imbalanced dataset reflecting the reality of the prevalence of pathogenic CNVs in the general population
+- [x] Make minimal change to the distribution shape of the volumes
+
 
 - Personal goals: 
 
@@ -367,4 +373,76 @@ embed_minimal_html('Interactive_plots/violin_regions.html', views=[widgets.VBox(
 ```
 
 ## Training set and test set
+
+In the sample of 35,759 individuals, controls represent 96.5% of the population. This drastic imbalanced whill be difficult to handle for the ML models.
+
+Another interest of the project is to work with groups which reflect the reality. Dealing with the group imbalance by creating a well balanced dataset is not an option here.
+
+As an alternative, the imbalance will be reduced by pseudo-randomly resampling the controls, to have a final sample with two fold controls than carriers.
+
+Click on the following images to open interactive pie-charts showing the proportion of controls and carriers in the training and test sets used for the ML models. 
+
+<p align="center">
+<a href="blog_content/piechart_traintest.html"><img src="blog_content/piechart_trainingtest.png" width="700" height="450" title="Click to access to the interactive pie-chart" alt="trainingtestsets"></a>
+</p>
+
+```python
+# Loading plotly and widget libraries
+import plotly.graph_objects as go
+import plotly.express as px
+from plotly.subplots import make_subplots
+
+#plot it
+specs = [[{'type':'domain'}, {'type':'domain'}]]
+fig5 = make_subplots(rows=1, cols=2, specs=specs)
+fig5 = go.Figure(fig5)
+
+fig5.add_trace(go.Pie(labels=["Controls","Carriers"], 
+                      values=[1771,   885], 
+                      name='Training dataset',), 1,1,
+              )
+
+fig5.add_trace(go.Pie(labels=["Controls","Carriers"], 
+                      values=[759,   380], 
+                      name='Test dataset',), 1, 2,
+              )
+
+fig5.update_traces(hole=.4)
+fig5.update_layout(legend_title_text="Group", paper_bgcolor='rgba(0,0,0,0)',
+                   plot_bgcolor='rgba(0,0,0,0)',
+                   title_text="Proportion of controls and carriers in each dataset used for the ML (train and test)",
+                   # Add annotations in the center of the donut pies.
+                   annotations=[dict(text='Train', x=0.19, y=0.5, font_size=20, showarrow=False),
+                                dict(text='Test', x=0.80, y=0.5, font_size=20, showarrow=False)])
+
+# Save as html
+fig5.write_html("Interactive_plots/piechart_traintest.html")
+```
+
+# This is the end of the assignement for the data visualization
+
+- Thank you :)
+
+<p align="center">
+  <img src="https://media.giphy.com/media/l0HlN5Y28D9MzzcRy/giphy.gif" height="300">
+</p>
+<p align="center"> <font size="1.5"> Source: https://media.giphy.com/</font></p> 
+
+# References
+
+Cauda F. et al., “Are Schizophrenia, Autistic, and Obsessive Spectrum Disorders Dissociable on the Basis of Neuroimaging Morphological Findings?: A Voxel-Based Meta-Analysis.” Autism Research 10, no. 6 (2017): 1079–95. https://doi.org/10.1002/aur.1759.
+
+Goodkind M. et al., “Identification of a Common Neurobiological Substrate for Mental Illness.” JAMA Psychiatry 72, no. 4 (April 2015): 305–15. https://doi.org/10.1001/jamapsychiatry.2014.2206.
+
+Kendall K. M. et al., “Cognitive Performance and Functional Outcomes of Carriers of Pathogenic Copy Number Variants: Analysis of the UK Biobank.” The British Journal of Psychiatry 214, no. 5 (May 2019): 297–304. https://doi.org/10.1192/bjp.2018.301.
+
+Maillard A. M. et al., “The 16p11.2 Locus Modulates Brain Structures Common to Autism, Schizophrenia and Obesity.” Molecular Psychiatry 20, no. 1 (February 2015): 140–47. https://doi.org/10.1038/mp.2014.145.
+
+Martin-Brevet S. et al., “Quantifying the Effects of 16p11.2 Copy Number Variants on Brain Structure: A Multisite Genetic-First Study.” *Biological Psychiatry*, 84, no. 4 (2018): 253–64. https://doi.org/10.1016/j.biopsych.2018.02.1176.
+
+Modenato C. et al., “Neuropsychiatric Copy Number Variants Exert Shared Effects on Human Brain Structure.” MedRxiv, April 17, 2020, 2020.04.15.20056531. https://doi.org/10.1101/2020.04.15.20056531.
+
+Moreau C. et al., “Neuropsychiatric Mutations Delineate Functional Brain Connectivity Dimensions Contributing to Autism and Schizophrenia.” *BioRxiv*, (2019), 862615. https://doi.org/10.1101/862615.
+
+
 
