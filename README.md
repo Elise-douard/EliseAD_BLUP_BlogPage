@@ -25,7 +25,7 @@ Such pathogenic CNVs have been associated to significant alterations of brain vo
 
 Notably, there were common alterations of the insula volume when comparing structural brain alterations due to pathogenic CNVs and due to a neurodevelopmental disorder (e.g. ASD or SZ) ([Cauda et al., 2017](https://onlinelibrary.wiley.com/doi/abs/10.1002/aur.1759) ; [Goodkind et al., 2015](https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2108651)). 
 
-# AIM OF THE PROJECT
+# AIMS OF THE PROJECT
 
 <p align="center">
   <img src="blog_content/BLUPproject.png">
@@ -49,7 +49,7 @@ This project aims to feed a machine learning model with brain volumes to predict
 - [x] Learn how to machine learning
 - [x] Learn how to interactive plot
 
-# METHOD
+# METHODS
 
 ## Raw data
 
@@ -195,11 +195,11 @@ embed_minimal_html('blog_content/violin_ageTIV.html', views=[widgets.VBox([confo
 Click on the following images to open interactive pie-charts showing the sex and site of aquisition distributions in function of the groups.
 
 <p align="center">
-<a href="blog_content/piechart_sex.html"><img src="blog_content/piechart_sex.png" width="700" height="450" title="Click to access to the interactive pie-charts" alt="piechartsex"></a>
+<a href="blog_content/piechart_sexsite.html"><img src="blog_content/piechart_sex.png" width="700" height="450" title="Click to access to the interactive pie-charts" alt="piechartsex"></a>
 </p>
 
 <p align="center">
-<a href="blog_content/piechart_site.html"><img src="blog_content/piechart_site.png" width="700" height="450" title="Click to access to the interactive pie-charts" alt="piechartsite"></a>
+<a href="blog_content/piechart_sexsite.html"><img src="blog_content/piechart_site.png" width="700" height="450" title="Click to access to the interactive pie-charts" alt="piechartsite"></a>
 </p>
 
 Code used to create pie-charts of sex and sites of acquisition with the widget function in Plotly:
