@@ -374,7 +374,7 @@ embed_minimal_html('Interactive_plots/violin_regions.html', views=[widgets.VBox(
 
 ## Training set and test set
 
-In the sample of 35,759 individuals, controls represent 96.5% of the population. This drastic imbalanced whill be difficult to handle for the ML models.
+In the sample of 35,759 individuals, controls represent 96.5% of the population. This drastic imbalanced will be difficult to handle for the ML models.
 
 Another interest of the project is to work with groups which reflect the reality. Dealing with the group imbalance by creating a well balanced dataset is not an option here.
 
@@ -430,17 +430,17 @@ fig5.write_html("Interactive_plots/piechart_traintest.html")
 
 # References
 
-Cauda F. et al., “Are Schizophrenia, Autistic, and Obsessive Spectrum Disorders Dissociable on the Basis of Neuroimaging Morphological Findings?: A Voxel-Based Meta-Analysis.” Autism Research 10, no. 6 (2017): 1079–95. https://doi.org/10.1002/aur.1759.
+Cauda F. et al., “Are Schizophrenia, Autistic, and Obsessive Spectrum Disorders Dissociable on the Basis of Neuroimaging Morphological Findings?: A Voxel-Based Meta-Analysis.” *Autism Research* 10, no. 6 (2017): 1079–95. https://doi.org/10.1002/aur.1759.
 
-Goodkind M. et al., “Identification of a Common Neurobiological Substrate for Mental Illness.” JAMA Psychiatry 72, no. 4 (April 2015): 305–15. https://doi.org/10.1001/jamapsychiatry.2014.2206.
+Goodkind M. et al., “Identification of a Common Neurobiological Substrate for Mental Illness.” *JAMA Psychiatry* 72, no. 4 (April 2015): 305–15. https://doi.org/10.1001/jamapsychiatry.2014.2206.
 
-Kendall K. M. et al., “Cognitive Performance and Functional Outcomes of Carriers of Pathogenic Copy Number Variants: Analysis of the UK Biobank.” The British Journal of Psychiatry 214, no. 5 (May 2019): 297–304. https://doi.org/10.1192/bjp.2018.301.
+Kendall K. M. et al., “Cognitive Performance and Functional Outcomes of Carriers of Pathogenic Copy Number Variants: Analysis of the UK Biobank.” *The British Journal of Psychiatry* 214, no. 5 (May 2019): 297–304. https://doi.org/10.1192/bjp.2018.301.
 
-Maillard A. M. et al., “The 16p11.2 Locus Modulates Brain Structures Common to Autism, Schizophrenia and Obesity.” Molecular Psychiatry 20, no. 1 (February 2015): 140–47. https://doi.org/10.1038/mp.2014.145.
+Maillard A. M. et al., “The 16p11.2 Locus Modulates Brain Structures Common to Autism, Schizophrenia and Obesity.” *Molecular Psychiatry* 20, no. 1 (February 2015): 140–47. https://doi.org/10.1038/mp.2014.145.
 
 Martin-Brevet S. et al., “Quantifying the Effects of 16p11.2 Copy Number Variants on Brain Structure: A Multisite Genetic-First Study.” *Biological Psychiatry*, 84, no. 4 (2018): 253–64. https://doi.org/10.1016/j.biopsych.2018.02.1176.
 
-Modenato C. et al., “Neuropsychiatric Copy Number Variants Exert Shared Effects on Human Brain Structure.” MedRxiv, April 17, 2020, 2020.04.15.20056531. https://doi.org/10.1101/2020.04.15.20056531.
+Modenato C. et al., “Neuropsychiatric Copy Number Variants Exert Shared Effects on Human Brain Structure.” *MedRxiv*, April 17, 2020, 2020.04.15.20056531. https://doi.org/10.1101/2020.04.15.20056531.
 
 Moreau C. et al., “Neuropsychiatric Mutations Delineate Functional Brain Connectivity Dimensions Contributing to Autism and Schizophrenia.” *BioRxiv*, (2019), 862615. https://doi.org/10.1101/862615.
 
